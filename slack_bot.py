@@ -6,13 +6,13 @@ from flask import Flask, request, jsonify, Response
 import time
 
 # Load bot token from environment variables or set it directly
-SLACK_BOT_TOKEN = "xoxb-7715112267175-7768517775362-2v9cAdMljH71gyCs7Mn0rGGL"  # Replace with your Slack bot token
+SLACK_BOT_TOKEN = "xoxb-"  # Replace with your Slack bot token
 client = WebClient(token=SLACK_BOT_TOKEN)
 
 app = Flask(__name__)
 
 # Private API endpoint (replace with your actual API endpoint)
-PRIVATE_API_URL = "https://genai.pt-df.inday.io/api/v2alpha/prompt/generate/YzFmNmQxYTAtMjc5MC00MDJjLTkzY2EtMGEzZTcxNGE4NDMwOjpnYWdhbi5zaW5naA"
+PRIVATE_API_URL = "https://genai/api/v2alpha/prompt/generate/YzFmNmQxYTAtMjc5MC00MD"  # Replace with Prompt API URL
 
 # Track processed message IDs and their timestamps
 processed_messages = {}
@@ -66,9 +66,9 @@ def slack_events():
         # Prepare headers for the API request
         headers = {
             'accept': 'application/json',
-            'wd-origin': 'gagan.singh',  # Replace with your origin
-            'wd-pca-feature-key': 'gagan.singh',  # Replace with actual feature key
-            'api_key': 'eyJ1c2VySWQiOiJnYWdhbi5zaW5naCIsImFwaUtleSI6Ijg3ZjRiMzQ1LWExZGUtNGVmYi04MmFiLTQxZjA5YTIzMzE4MSJ9',  # Replace with your actual API key
+            'wd-origin': 'user.name',  # Replace with your origin
+            'wd-pca-feature-key': 'user.name',  # Replace with actual feature key
+            'api_key': '',  # Replace with your actual API key
             'Content-Type': 'application/json'
         }
 
